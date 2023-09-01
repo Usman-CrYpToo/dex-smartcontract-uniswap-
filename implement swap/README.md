@@ -28,15 +28,13 @@ Follow these steps to set up and use the project:
    Open the `hardhat.config.js` file and replace `<your-alchemy-api-key>` with your actual Alchemy API Key:
 
    ```javascript
-   networks: {
-     localhost: {
-       url: "http://127.0.0.1:8545",
-     },
-     // ...
-     rinkeby: {
-       url: `https://eth-rinkeby.alchemyapi.io/v2/<your-alchemy-api-key>`,
-     },
-   },
+     networks:{
+     hardhat:{
+      forking:{
+         url:"your-alchemy-api-key"
+      }
+     }
+  },
    ```
 
 3. **Install Dependencies**:
